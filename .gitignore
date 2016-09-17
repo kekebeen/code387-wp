@@ -1,0 +1,95 @@
+
+# Ignores everything in wp-content except plugins and themes (this means uploads wont be checked in)
+
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+
+ 
+# Ignore everything in the "plugins" directory, except the plugins you declare
+#Allows only plugins needed to make the site work to be stored in source control
+
+wp-content/plugins/*
+# !wp-content/plugins/[some important plugin]
+
+
+
+# Ignore everything in the "themes" directory, except the themes we have built
+wp-content/themes/*
+!wp-content/themes/kreartivci
+
+#sitemaps created by plugins (dynamically generated so no point storing)
+sitemap.xml
+sitemap.xml.gz
+
+
+/*================================================================*/
+# FILE SYSTEMS FILES
+*.db
+.DS_Store
+._*
+*~
+/**/._*
+.fuse*
+
+# LOG FILES
+*.log
+
+# APACHE CONFIGURATION FILES
+/.htaccess
+/.htpasswd
+
+# WORDPRESS CONFIGURATION FILES
+/wp-config.php
+/wp-config-sample.php
+/wp-config/wp-config-database.php
+
+# WORDPRESS DEFAULT FILES
+/licence.txt
+/readme.html
+
+# UPGRADE TEMP FILES
+/app/upgrade/
+
+# UPLOADS AND MEDIA
+/app/uploads
+/uploads
+/app/media
+/media
+
+# EDITORS / IDE FILES
+nbproject/*
+.settings/*
+.buildpath
+.project
+
+# PHING CONFIGURATION FILES
+/my.build.properties
+
+# NODES MODULES
+node_modules
+
+# SVN FILES
+*.svn
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!README.md
+!CHANGELOG.md
+!composer.json
+
+# track favicon files, if they exist
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
