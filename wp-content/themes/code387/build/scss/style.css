@@ -62,3 +62,55 @@
 /* Uncomment out the line below to help debug layout issues */
 /* @import './_debug'; */
 
+/* Sections, Partials, Else */
+
+/* HEADER */
+:root{
+    --btn: 14px;
+}
+.site-header{
+    background-image: url('./img/bg.jpg');
+}
+
+.window .bar{
+    height: calc(var(--btn) * 3);
+}
+
+.bar .btn{
+    height: var(--btn);
+    width: var(--btn);
+    top: var(--btn);
+}
+
+.bar .btn::before,
+.bar .btn::after{
+    content: '';
+    height: var(--btn);
+    width: var(--btn);
+    position: absolute;
+    border-radius: 100%;
+}
+.bar .btn::before{
+    background: #f6b73e;
+    margin-left: 22px;
+}
+.bar .btn::after{
+    background: #32c146;
+    margin-left: 44px;
+}
+
+.prompt .pulse{
+    animation: 1s pulse ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
