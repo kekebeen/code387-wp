@@ -5,8 +5,6 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
-
- 
 # Ignore everything in the "plugins" directory, except the plugins you declare
 #Allows only plugins needed to make the site work to be stored in source control
 
@@ -17,7 +15,7 @@ wp-content/plugins/*
 
 # Ignore everything in the "themes" directory, except the themes we have built
 wp-content/themes/*
-!wp-content/themes/kreartivci
+!wp-content/themes/code387
 
 #sitemaps created by plugins (dynamically generated so no point storing)
 sitemap.xml
