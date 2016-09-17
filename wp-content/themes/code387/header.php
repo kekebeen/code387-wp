@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-    <header id="masthead" class="site-header bg-center cover pv6" role="banner">
+    <header id="masthead" class="site-header bg-center cover pv5" role="banner">
         <div class="terminal mw7 center ph3 ph2-ns tc br2 pv5 mb5">
            <!-- <h1 class="fw6 f3  f2-ns lh-title mt0 mb3 white">This is a tagline. For x.</h1> -->
            <div class="window shadow-1 br1 tl">
@@ -42,5 +42,17 @@
            </div>
         </div><!-- terminal -->
     </header><!-- #masthead -->
+    <nav class="db dt-l w-100 border-box pa3 ph5-l shadow-1-ns">
+        <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
+            <h1 class="dib w2 h2">code387</h1>
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Blog">Blog</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Press">Press</a>
+            <a class="link dim dark-gray f6 f5-l dib" href="#" title="Contact">Contact</a>
+        </div>
+    </nav><!-- main navigation -->
 
-    <div id="content" class="site-content">
+    <div id="content" class="site-content mv5 pv5">
