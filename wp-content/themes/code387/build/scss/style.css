@@ -1,4 +1,3 @@
-
 /* External Library Includes */
 @import './_normalize';
 
@@ -63,7 +62,7 @@
 /* @import './_debug'; */
 
 /* Sections, Partials, Else */
-
+@import './modules/_tonicons';
 /* HEADER */
 :root{
     --btn: 14px;
@@ -113,4 +112,20 @@
     100%{
         opacity: 0;
     }
+}
+
+/* or divider */
+.or-divider::before,
+.or-divider::after{
+    content: '';
+    height: 1px;
+    background: #999;
+}
+.or-divider::before{
+    flex: 1;
+    margin: 0 .25em 0 0;
+}
+.or-divider::after{
+        flex: 1;
+    margin: 0 0 0 .25em;
 }

@@ -1,9 +1,10 @@
-<div class="separator-title mb4">
-    <h1>Recent Work</h1>
-    <?php get_template_part('template-parts/title-separator'); ?>
-</div>
+<div class="mw8 center ph3-ns">
+    <div class="separator-title mb4 tc">
+        <h1 class="ttu blue f2 fw5 mb2">Recent Work</h1>
+        <?php get_template_part('template-parts/title-separator'); ?>
+    </div><!-- separator title -->
 
-<?php
+    <?php
     if ( have_posts() ) :
 
         if ( is_home() && ! is_front_page() ) : ?>
@@ -28,8 +29,12 @@
 
         the_posts_navigation();
 
-    else :
+        else :
 
         get_template_part( 'template-parts/content', 'none' );
 
     endif; ?>
+</div><!-- container -->
+
+
+
