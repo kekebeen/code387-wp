@@ -22,15 +22,15 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.ton-li-heart:before {
+.ton-li-heart::before {
     content: "\e85c";
 }
-.ton-li-key:before {
+.ton-li-key::before {
     content: "\e827";
 }
-.ton-li-data-1:before {
+.ton-li-data-1::before {
     content: "\e88d";
 }
-.ton-li-new-mail:before {
+.ton-li-new-mail::before {
     content: "\e86f";
 }
