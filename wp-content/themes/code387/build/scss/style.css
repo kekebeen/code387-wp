@@ -185,3 +185,22 @@ body{
 .icon__info .subtitle{
     left: 7.5rem;
 }
+
+/* Contact section */
+
+input[type="text"],
+input[type="email"],
+textarea{
+    border-color: #D1D1D1;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+textarea{
+    min-height: 65px;
+}
+
+.btn{
+    cursor: pointer;
+}
