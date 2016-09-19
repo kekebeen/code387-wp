@@ -80,6 +80,8 @@ function code387_content_width() {
 }
 add_action( 'after_setup_theme', 'code387_content_width', 0 );
 
+
+
 /**
  * Register widget area.
  *
