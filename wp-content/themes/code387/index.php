@@ -19,7 +19,8 @@ get_header(); ?>
 			<?php get_template_part('template-parts/section','work'); ?>
 			<?php get_template_part('template-parts/section','features'); ?>
 			<?php get_template_part('template-parts/section','offer'); ?>
-			<?php get_template_part('template-parts/section','contact'); ?>
+            <?php get_template_part('template-parts/section','contact'); ?>
+			<?php get_template_part('template-parts/section','footer'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
