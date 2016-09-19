@@ -34,3 +34,6 @@ i {
 .ton-li-new-mail::before {
     content: "\e86f";
 }
+.ton-li-globe::before {
+    content: "\e82b";
+}
