@@ -58,35 +58,6 @@ function code387_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'code387_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-	//remove emojis 
-	// disable Emojicons in WordPress 4.2
-	function wpcs_remove_emojicons() {
-
-	    // Remove from comment feed and RSS
-	    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-	    // Remove from emails
-	    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-
-	    // Remove from head tag
-	    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-
-	    // Remove from print related styling
-	    remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-	    // Remove from admin area
-	    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	    remove_action( 'admin_print_styles', 'print_emoji_styles' );
-
-	}
-	add_action( 'init', 'wpcs_remove_emojicons' );
 }
 endif;
 add_action( 'after_setup_theme', 'code387_setup' );
@@ -128,9 +99,10 @@ add_action( 'widgets_init', 'code387_widgets_init' );
  */
 function code387_scripts() {
 	wp_enqueue_style( 'code387-style', get_stylesheet_uri() );
-
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script('jquery',"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js",array(),'3.1.0',true);
+	wp_enqueue_script('waypoints',"https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js",array('jquery'),'4.0.1',true);
 	wp_enqueue_script( 'code387-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'code387-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -240,3 +212,38 @@ if( ! class_exists('Acf') )
 
 // add work custom thumbnail
 add_image_size( 'work_thumb', 306, 306, true );
+
+//remove emojis
+function wpcs_remove_emojicons() {
+
+    // Remove from comment feed and RSS
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+    // Remove from emails
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+    // Remove from head tag
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+
+    // Remove from print related styling
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+    // Remove from admin area
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+}
+add_action( 'init', 'wpcs_remove_emojicons' );
+
+//remove jquery migrate if using jquery
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+function remove_jquery_migrate( &$scripts)
+{
+    if(!is_admin())
+    {
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+    }
+}

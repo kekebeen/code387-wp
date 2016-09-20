@@ -1,4 +1,4 @@
-<section class="mw-100 ph3-ns pv5 mv5">
+<section class="mw-100 ph3-ns pv5 mv5" id="offer-section">
     <div class="diagonal">
         <div class="info relative w100 bg-center cover z-1 white tc pv5 overflow-hidden">
             <h1 class="ttu mb4 f3 mr7">what we offer</h1>

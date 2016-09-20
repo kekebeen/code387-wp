@@ -43,16 +43,16 @@
            </div>
         </div><!-- terminal -->
     </header><!-- #masthead -->
-    <nav class="db dt-l w-100 border-box pa3 ph5-l shadow-1-ns">
+    <nav class="db dt-l w-100 border-box pa3 ph5-l shadow-1-ns" id="main-nav">
         <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
-            <h1 class="dib w2 h2">code387</h1>
+            <h1 class="dib w2 h2 blue pt1 fw7">code387</h1>
         </a>
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Blog">Blog</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Press">Press</a>
-            <a class="link dim dark-gray f6 f5-l dib" href="#" title="Contact">Contact</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#masthead" title="Home">Home</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#work-section" title="Work">Portfolio</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#features-section" title="Features">Features</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#offer-section" title="Offer">Offer</a>
+            <a class="link dim dark-gray f6 f5-l dib" href="#contact-section"  title="Contact">Contact</a>
         </div>
     </nav><!-- main navigation -->
 
