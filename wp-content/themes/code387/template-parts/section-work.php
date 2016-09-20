@@ -4,6 +4,7 @@
         <?php get_template_part('template-parts/title-separator'); ?>
     </div><!-- separator title -->
 
+    <div class="cf w-100 pa2-ns">
     <?php
     if ( have_posts() ) :
 
@@ -14,7 +15,6 @@
 
         <?php
         endif;
-
         /* Start the Loop */
         while ( have_posts() ) : the_post();
 
@@ -34,6 +34,7 @@
         get_template_part( 'template-parts/content', 'none' );
 
     endif; ?>
+    </div><!-- grid -->
 </section><!-- container -->
 
 

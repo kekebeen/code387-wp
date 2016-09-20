@@ -9,39 +9,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php code387_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'code387' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'code387' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php code387_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" <?php post_class('fl w-100 w-50-m  w-33-ns pa2-ns'); ?> >
+	<div class="aspect-ratio aspect-ratio--1x1">
+	<?php
+		$cover_image = get_field('cover');
+		$link 		 = get_field('link');
+		$body  		 = get_field('excerpt');
+	 ?>
+	<?php if ( !empty($cover_image) ): ?>
+      <img src="<?php echo $cover_image['url']; ?>"
+      class="db bg-center cover aspect-ratio--object" />
+  	<?php endif ?>
+    </div>
+    <?php if (!empty($link) && !empty($body)): ?>
+    <a href="<?php echo esc_url($link); ?>" class="ph2 ph0-ns pb3 link db">
+      <h3 class="f5 f4-ns mb0 black-90"><?php echo the_title(); ?></h3>
+    </a>
+	<?php endif ?>
 </article><!-- #post-## -->
