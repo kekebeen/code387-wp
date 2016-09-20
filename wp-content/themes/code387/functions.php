@@ -64,6 +64,29 @@ function code387_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	//remove emojis 
+	// disable Emojicons in WordPress 4.2
+	function wpcs_remove_emojicons() {
+
+	    // Remove from comment feed and RSS
+	    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	    // Remove from emails
+	    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+	    // Remove from head tag
+	    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+
+	    // Remove from print related styling
+	    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	    // Remove from admin area
+	    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+	}
+	add_action( 'init', 'wpcs_remove_emojicons' );
 }
 endif;
 add_action( 'after_setup_theme', 'code387_setup' );
@@ -206,3 +229,14 @@ function add_my_post_types_to_query( $query ) {
   return $query;
 }
 
+// hide acf menu in admin dashboard
+add_filter('acf/settings/show_admin', '__return_false');
+// include acf lite for speed
+if( ! class_exists('Acf') )
+{
+	define( 'ACF_LITE' , true );
+	include_once('advanced-custom-fields/acf.php' );
+}
+
+// add work custom thumbnail
+add_image_size( 'work_thumb', 306, 306, true );

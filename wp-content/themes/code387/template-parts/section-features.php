@@ -1,4 +1,4 @@
-<section class="mw8 center ph3-ns pv7 mv5">
+<section class="mw8 center ph3-ns pv5 mv5">
     <div class="separator-title mb6 tc">
         <h1 class="ttu blue f2 fw5 mb2">Features</h1>
         <?php get_template_part('template-parts/title-separator'); ?>
