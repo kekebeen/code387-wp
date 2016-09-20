@@ -138,6 +138,30 @@ body{
     margin: 0 0 0 .25em;
 }
 
+/* Work section */
+.flipcard{
+    perspective: 350px;
+    -webkit-perspective: 350px;
+}
+
+.flipcard>div{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: .4s ease transform;
+}
+.flipcard .article__back{
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.flipcard:hover > div:first-of-type{
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.flipcard:hover > div:last-of-type{
+    -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+}
 /* Features section */
 .features-circle{
     min-width: 10px;

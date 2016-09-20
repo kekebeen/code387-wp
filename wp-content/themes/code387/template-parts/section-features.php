@@ -7,7 +7,7 @@
     <div class="cf">
         <div class="fl w-100 w-third-ns tc">
             <div class="features-circle dib relative br-100 v-base nowrap lh-solid mb3 pa3 tc">
-                <i class="ton-li-key f1"></i>
+                <i class="ton-li-key f1 blue"></i>
             </div><!-- circle icon -->
             <h2 class="ttu f3 fw5 mb2">web design</h2>
             <div class="features-body pa3 tl">
@@ -20,7 +20,7 @@
         </div>
         <div class="fl w-100 w-third-ns tc">
             <div class="features-circle dib relative br-100 v-base nowrap lh-solid mb3 pa3 tc">
-                <i class="ton-li-new-mail f1"></i>
+                <i class="ton-li-new-mail f1 blue"></i>
             </div><!-- circle icon -->
             <h2 class="ttu f3 fw5 mb2">web development</h2>
             <div class="features-body pa3 tl">
@@ -32,7 +32,7 @@
         </div>
         <div class="fl w-100 w-third-ns tc">
              <div class="features-circle dib relative br-100 v-base nowrap lh-solid mb3 pa3 tc">
-                <i class="ton-li-data-1 f1"></i>
+                <i class="ton-li-data-1 f1 blue"></i>
             </div><!-- circle icon -->
             <h2 class="ttu f3 fw5 mb2">seo</h2>
             <div class="features-body pa3 tl">
