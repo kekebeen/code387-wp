@@ -162,12 +162,15 @@ body{
     -webkit-transform: rotateX(0);
         transform: rotateX(0);
 }
-/* Features section */
-.features-circle{
-    min-width: 10px;
-    box-shadow: 0 2px 0 #eee;
+/* Features */
+.feature__icon{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-
+.feature__icon:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
 /* What we offer */
 .info{
     height: 400px;
