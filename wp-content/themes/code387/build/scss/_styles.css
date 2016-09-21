@@ -120,7 +120,7 @@ nav.sticky{
 /* What we offer */
 .info{
     height: 400px;
-    background-image: url('./img/bg.jpg');
+    background-image: url('./img/features-bg.jpg');
 }
 .info .colorinfo{
     content: '';
