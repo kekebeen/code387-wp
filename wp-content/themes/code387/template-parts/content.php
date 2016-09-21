@@ -26,14 +26,14 @@
         </div>
         <?php if (!empty($link) && !empty($body)): ?>
             <div class="ph2 ph0-ns pv2 link db">
-              <h3 class="f5 f4-ns mb0 black-90"><?php echo the_title(); ?></h3>
+              <h1 class="f5 f4-ns mb0 black-90"><?php echo the_title(); ?></h1>
             </div><!-- caption div -->
         <?php endif ?>
     </div><!-- front side of flipcard -->
-    <div class="article__back absolute top-0 left-0 h-100 w-100 ba b--light-gray tc ph2 pv4 border-box">
-        <h1><?php echo the_title(); ?></h1>
-        <hr class="mw3 bb bw1 b--black-10">
-        <div class="lh-copy measure center f6 black-70 mb3">
+    <div class="article__back absolute top-0 left-0 h-100 w-100 ba b--light-gray tc pa4 border-box flex flex-column justify-center items-center">
+        <h1 class="f4 ttu lh-title"><?php echo the_title(); ?></h1>
+        <hr class="mw3 bb bw1 b--blue">
+        <div class="lh-copy measure-narrow center f6 black-70 mb3">
             <?php echo $body ?>
         </div><!-- description -->
         <a class="f6 link dim br2 ba ph3 pv2 mb2 dib mid-gray" href="http://<?php echo $link ?>" target="_blank" rel="noopener">URI</a>
