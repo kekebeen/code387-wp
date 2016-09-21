@@ -1,5 +1,5 @@
 <section class="mw8 center ph3-ns pt0 pv3 mt0 mb5" id="work-section">
-    <div class="separator-title mb6 tc">
+    <div class="separator-title mb4 mb6-ns pa2 pa0-ns tc">
         <h1 class="ttu blue f2 fw5 mb2">Recent Work</h1>
         <?php get_template_part('template-parts/title-separator'); ?>
     </div><!-- separator title -->

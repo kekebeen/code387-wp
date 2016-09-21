@@ -50,8 +50,8 @@
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
             <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#masthead" title="Home">Home</a>
             <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#work-section" title="Work">Portfolio</a>
-            <a class="link dim dark-gray f6 f5-l dn dib-ns mr3 mr4-l" href="#features-section" title="Features">Features</a>
-            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#offer-section" title="Offer">Offer</a>
+            <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#features-section" title="Features">Features</a>
+            <a class="link dim dark-gray f6 f5-l dn dib-l mr3 mr4-l" href="#offer-section" title="Offer">Offer</a>
             <a class="link dim dark-gray f6 f5-l dib" href="#contact-section"  title="Contact">Contact</a>
         </div>
     </nav><!-- main navigation -->

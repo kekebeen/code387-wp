@@ -1,4 +1,4 @@
-<section class="mw8 center ph3-ns pv5 mv5">
+<section class="mw8 center ph3-ns pv2 pv5-ns mv2 mv5-ns">
    <footer class="pv4 ph3 ph5-ns tc">
       <a class="link dim gray dib h2 w2 br-100 mr3 pa2 bg-near-white ba b--black-10" href="https://www.facebook.com/perpetuumBA/?fref=ts" title="">
         <svg data-icon="facebook" viewBox="0 0 32 32" style="fill:currentcolor">

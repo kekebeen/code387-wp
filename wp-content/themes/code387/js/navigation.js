@@ -1,5 +1,6 @@
 function scrollAnchor(){
     $('nav a').click(function(){
+        console.log($(this).attr('href'));
         $('html, body').stop().animate({
             scrollTop: $( $(this).attr('href') ).offset().top - 160
         }, 400);

@@ -1,11 +1,11 @@
 <section class="mw8 center ph3-ns pv5 mv5" id="features-section">
-    <div class="separator-title mb6 tc">
+    <div class="separator-title mb4 mb6-ns pa2 pa0-ns tc">
         <h1 class="ttu blue f2 fw5 mb2">Features</h1>
         <?php get_template_part('template-parts/title-separator'); ?>
     </div><!-- separator -->
 
     <div class="cf">
-        <div class="fl w-100 w-third-ns tc pa2 feature__icon">
+        <div class="fl w-100 w-third-ns tc pa2 feature__icon mb-1 mb0-ns">
             <div class="db bb bw2 b--blue w-100 h-100">
                 <div class="dib relative mb3 ">
                     <i class="ton-li-key f1 blue"></i>
@@ -21,7 +21,7 @@
             </div><!-- border div -->
         </div><!-- icon 1 -->
 
-        <div class="fl w-100 w-third-ns tc pa2 feature__icon">
+        <div class="fl w-100 w-third-ns tc pa2 feature__icon mb-1 mb0-ns">
             <div class="db bb bw2 b--blue w-100 h-100">
                 <div class="dib relative mb3">
                     <i class="ton-li-new-mail f1 blue"></i>
@@ -36,7 +36,7 @@
             </div><!-- border div -->
         </div><!-- icon2-->
 
-        <div class="fl w-100 w-third-ns tc pa2 feature__icon">
+        <div class="fl w-100 w-third-ns tc pa2 feature__icon mb-1 mb0-ns">
             <div class="db bb bw2 b--blue w-100 h-100">
                 <div class="dib relative mb3">
                     <i class="ton-li-data-1 f1 blue"></i>
