@@ -16,6 +16,8 @@ var short = require ('postcss-short');
 var cssnext = require('postcss-cssnext');
 var size = require('postcss-size');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var watch = require('gulp-watch');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
@@ -58,6 +60,18 @@ gulp.task('postcss', function () {
 });
 
 // JavaScript
+gulp.task( 'customJS', function() {
+    return gulp.src( 'build/js/*.js' )
+    .pipe( concat( 'custom.js' ) )
+    .pipe( gulp.dest( './js/' ) )
+    .pipe( rename( {
+      basename: 'custom',
+      suffix: '.min'
+    }))
+    .pipe( uglify() )
+    .pipe( gulp.dest( './js/' ) )
+    .pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
+ });
 
 gulp.task('js', function () {
   return gulp.src('build/js/*.js')
@@ -78,7 +92,7 @@ gulp.task('init-live-reload', function() {
 
 // Watch Files For Changes
 gulp.task('dev-watch', function() {
-  gulp.watch( './build/js/*.js', ['js'] );
+  gulp.watch( './build/js/*.js', ['customJS'] );
   gulp.watch( './build/scss/*.css', ['postcss']);
   gulp.watch( './**/*.php').on('change', browserSync.reload);
   gulp.watch( './style.css').on('change', browserSync.reload);

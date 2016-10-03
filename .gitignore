@@ -9,7 +9,7 @@ wp-content/*
 #Allows only plugins needed to make the site work to be stored in source control
 
 wp-content/plugins/*
-# !wp-content/plugins/[some important plugin]
+!wp-content/plugins/code387-contact.php
 
 
 
